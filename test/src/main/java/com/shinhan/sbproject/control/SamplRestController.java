@@ -25,7 +25,7 @@ public class SamplRestController {
 		testepo.findAll().forEach(t->{
 			test.add(t);
 		});
-		output+="<table>";
+		output+="<table border=\"1px\">";
 		output+="<thead>";
 		output+="<tr>";
 		output+="<th> 번호";
