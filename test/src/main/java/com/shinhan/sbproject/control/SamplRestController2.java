@@ -27,7 +27,7 @@ public class SamplRestController2 {
 	public void sample2(Model model) {
 		model.addAttribute("greeting","하이~");
 		
-		log.info("요기옴");
+		log.info("요기옴");//hi
 		model.addAttribute("test", testepo.findAll());
 		log.info("나감");
 		
