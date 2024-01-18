@@ -28,6 +28,7 @@ public class SamplRestController2 {
 		model.addAttribute("greeting","하이~");
 
 		log.info("요기옴");//충돌테스트 져니임당
+		log.info("요기옴");//충돌테스트 재호가 다녀감
 		model.addAttribute("test", testepo.findAll());
 		log.info("나감");
 		
@@ -39,7 +40,7 @@ public class SamplRestController2 {
 		return "redirect:/sample2";
 	}
 	
-	@GetMapping("/sample3")
+	@GetMapping("/sample3") //재호가 다녀감
 	public void sample3(Model model) {
 		model.addAttribute("greeting","하이~");
 		
