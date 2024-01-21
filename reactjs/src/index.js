@@ -14,6 +14,7 @@ root.render(
     <Test />
   </>
 );
+
 //이것은 지워니 작성 구간
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
