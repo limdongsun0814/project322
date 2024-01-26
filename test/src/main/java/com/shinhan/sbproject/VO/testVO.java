@@ -36,5 +36,6 @@ public class testVO {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer seqno;
 	private String content;
+	// sunhee
 	
 }
