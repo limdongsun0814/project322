@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,39 +16,19 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
+@CrossOrigin 
 public class SamplRestController {
 	@Autowired
 	testRepository testepo;
 	
-	@GetMapping("/sample1")
-	public String f1() {
-		String output = "";
+	@GetMapping(value =  "/sample1",produces=MediaType.APPLICATION_JSON_VALUE )
+	public List<testVO> f1() {
 		List<testVO> test = new ArrayList<testVO>();
 		testepo.findAll().forEach(t->{
 			test.add(t);
 		});
-		output+="<table border=\"1px\">";
-		output+="<thead>";
-		output+="<tr>";
-		output+="<th> 번호";
-		output+="</th>";
-		output+="<th> 내용";
-		output+="</th>";
-		output+="</tr>";
-		output+="</thead>";
-		for(testVO t: test) {
-			output+="<tr>";
-			output+="<td>";
-			output+=t.getSeqno();
-			output+="</td>";
-			output+="<td>";
-			output+=t.getContent();
-			output+="</td>";
-			output+="</tr>";
-		}
-		output+="</table>";
-		log.info(output);
-		return output;
+		
+		return test;
 	}
 	
 	
