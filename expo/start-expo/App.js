@@ -10,7 +10,7 @@ import {
   View,
 } from "react-native";
 import MainPage from "./src/hooks/HooksTest";
-
+//  aaa
 export default function App() {
   const [test, setTest] = useState("살려줘");
   const [count, setCount] = useState(0);
@@ -23,6 +23,8 @@ export default function App() {
           setTest(e.target.value);
         }}
       ></TextInput>
+
+      <Button title="AA" onPress={(e) => setTest("초기 살려줘2")} />
       <Text>{count}</Text>
       <Button title="up" onPress={(e) => setCount(count + 1)}></Button>
       <Button title="down" onPress={(e) => setCount(count - 1)} />
