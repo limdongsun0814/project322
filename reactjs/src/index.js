@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
     <h1>안뇽</h1>
-    <HooksTest></HooksTest>
+    {/* <HooksTest></HooksTest> */}
     <hr></hr>
     <Test />
   </>
