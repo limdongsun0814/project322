@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Test from "./test/Test";
 import HooksTest from "./hooks/HooksTest";
+import Test2 from "./test/Test2";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -12,7 +13,7 @@ root.render(
     <h1>안뇽</h1>
     {/* <HooksTest></HooksTest> */}
     <hr></hr>
-    {/* <Test /> */}
+    <Test2 />
   </>
 );
 
